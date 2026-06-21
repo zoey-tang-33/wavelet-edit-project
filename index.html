@@ -1,0 +1,433 @@
+<!--
+  Built on the Academic Project Page Template
+  (https://github.com/eliahuhorwitz/Academic-project-page-template), adapted from Nerfies.
+  ----------------------------------------------------------------------------------------
+  WHAT YOU NEED TO DO
+  1. Put this file as index.html at the repo root. Create a folder  static/images/  beside it.
+  2. Each image slot below is a labeled placeholder. Replace the <div class="ph">...</div>
+     with the <img> line written in the comment right above it (filename is already set).
+  3. Push -> repo Settings -> Pages -> Source = main branch (root).
+  4. Turn on Paper / arXiv / Code buttons later: remove  disabled  + the style, set the href.
+-->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ECCV 2026. Wavelet-Guided Semantic Signal Compensation for Inversion-Free Image Editing.">
+  <meta property="og:title" content="Wavelet-Guided Semantic Signal Compensation for Inversion-Free Image Editing">
+  <meta property="og:description" content="A training-free fix for inversion-free editors that stall on global edits — strengthen the semantic signal in the wavelet domain.">
+  <meta property="og:image" content="static/images/social_preview.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Wavelet-Guided Semantic Signal Compensation for Inversion-Free Image Editing</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.4/css/academicons.min.css">
+
+  <style>
+    body { font-family: 'Noto Sans', sans-serif; }
+    .publication-title { font-family: 'Google Sans', sans-serif; }
+    .publication-authors { font-family: 'Google Sans', sans-serif; }
+    .publication-authors a { color: hsl(204, 86%, 53%) !important; }
+    .publication-authors a:hover { text-decoration: underline; }
+    .author-block { display: inline-block; }
+    .eql-cntrb { font-size: smaller; }
+    .venue-tag { font-family: 'Google Sans', sans-serif; font-weight: 600; color: hsl(204, 70%, 45%); }
+    .link-block a { margin-top: 5px; margin-bottom: 5px; }
+
+    /* image placeholders — replace each with the <img> in the comment above it */
+    .ph { display:flex; align-items:center; justify-content:center; text-align:center;
+          min-height:260px; background:#f5f5f5; border:1.5px dashed #b5b5b5; border-radius:10px;
+          color:#7a7a7a; padding:26px; }
+    .ph.tall { min-height:340px; }
+    .ph code { background:#eaeaea; color:#363636; padding:2px 7px; border-radius:5px; font-size:.9em; }
+    figure img, .result-img { border-radius:10px; }
+
+    /* symbols in the method text */
+    .sym { font-style: italic; }
+    .results-carousel { overflow: hidden; }
+    .results-carousel .item { margin:5px; overflow:hidden; border:1px solid #dbdbdb; border-radius:10px; padding:0; }
+    .results-carousel .item img { width:100%; display:block; }
+    .footer a { color:#4a4a4a; }
+  </style>
+  <style>
+    .edit-pair {
+      margin-bottom: 1rem;
+    }
+    .edit-imgs {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+    }
+    .edit-imgs figure {
+      flex: 1;
+      margin: 0;
+    }
+    .edit-imgs img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      object-fit: cover;
+    }
+    .edit-caption {
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      text-align: center;
+    }
+    .edit-caption .arrow {
+      margin: 0 6px;
+      color: #888;
+      font-weight: bold;
+    }
+    .edit-caption .tgt-prompt {
+      color: #c0392b;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===================== HERO / TITLE ===================== -->
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-2 publication-title">Wavelet-Guided Semantic Signal Compensation<br>for Inversion-Free Image Editing</h1>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><a href="#">Anqi Tang</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="#">Wenhao Sun</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="#">Zhaoqiang Liu</a><sup>1&#9993;</sup></span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>University of Electronic Science and Technology of China</span>
+          </div>
+
+          <div class="is-size-6 publication-authors" style="margin-top:6px">
+            <span class="venue-tag">ECCV 2026</span>
+            &nbsp;·&nbsp; <span class="eql-cntrb">&#9993; Corresponding author</span>
+          </div>
+
+          <div class="column has-text-centered" style="margin-top:18px">
+            <div class="publication-links">
+              <!-- Paper -->
+              <span class="link-block">
+                <a class="external-link button is-normal is-rounded is-dark" disabled style="pointer-events:none;opacity:.55">
+                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                  <span>Paper (soon)</span>
+                </a>
+              </span>
+              <!-- arXiv -->
+              <span class="link-block">
+                <a class="external-link button is-normal is-rounded is-dark" disabled style="pointer-events:none;opacity:.55">
+                  <span class="icon"><i class="ai ai-arxiv"></i></span>
+                  <span>arXiv (soon)</span>
+                </a>
+              </span>
+              <!-- Code -->
+              <span class="link-block">
+                <a class="external-link button is-normal is-rounded is-dark" disabled style="pointer-events:none;opacity:.55">
+                  <span class="icon"><i class="fab fa-github"></i></span>
+                  <span>Code (soon)</span>
+                </a>
+              </span>
+              <!-- BibTeX -->
+              <span class="link-block">
+                <a href="#BibTeX" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fas fa-quote-left"></i></span>
+                  <span>BibTeX</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TEASER ===================== -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <!-- REPLACE with: <img src="static/images/teaser.png" alt="Teaser"> -->
+      <div class="ph"><div><strong>Teaser &mdash; Fig. 1</strong><br><code>static/images/teaser.png</code><br><small>Global-edit failures of FlowEdit / FlowAlign / DVRF vs. ours.</small></div></div>
+      <h2 class="subtitle has-text-centered" style="margin-top:14px">
+        On global attribute shifts, prior inversion-free editors under-edit or drift;
+        ours realizes the change while keeping the structure intact.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ABSTRACT (MOTIVATION) ===================== -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Motivation</h2>
+        <div class="content has-text-justified">
+          <p>
+            Inversion-free editors such as FlowEdit are fast and naturally structure-preserving — they edit
+            by following the velocity difference between a source and a target trajectory, with no inversion
+            and no reconstruction drift. But they consistently fall short on <i>global</i> attribute changes,
+            such as recoloring an entire scene or shifting a material.
+          </p>
+          <p>
+            We trace the cause to the high-noise early steps of generation. There, the flow that transports the
+            sample toward the natural-image manifold dominates the comparatively weak text-conditioned direction,
+            so the trajectory stays tied to the source and the global edit never accumulates. By the time the noise
+            level drops and the prompt regains influence, the coarse layout and color are already fixed.
+          </p>
+          <p>
+            Our goal follows directly: <b>restore the semantic guidance precisely in that early window</b>, in a form
+            that reshapes global structure without disturbing fine detail — and do so on a pretrained model, with no
+            training and no attention surgery.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== METHOD (via method.png, symbolic) ===================== -->
+<section class="section" style="padding-top:0">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <h2 class="title is-3">Method</h2>
+      </div>
+    </div>
+
+    <!-- main method figure -->
+    <!-- REPLACE with: <img src="static/images/method.png" alt="Method overview"> -->
+    <div class="ph tall"><div><strong>Fig. 2 &mdash; Method overview</strong><br><code>static/images/method.png</code><br><small>(a) FlowEdit&rsquo;s single residual vs. (b) ours.</small></div></div>
+
+    <div class="columns is-centered" style="margin-top:18px">
+      <div class="column is-four-fifths">
+        <div class="content has-text-justified">
+          <p>
+            The figure contrasts one editing step of FlowEdit <b>(a)</b> with ours <b>(b)</b>. Both start from the
+            same source latent <span class="sym">x</span><sub>t</sub><sup>src</sup>.
+          </p>
+          <p>
+            <b>FlowEdit follows a single direction.</b> It forms one geometric residual
+            <span class="sym">&Delta;v</span><sub>t</sub> from the source and target velocity fields and steps along it.
+            Because <span class="sym">&Delta;v</span><sub>t</sub> compares two <i>different</i> latent points, under a
+            global edit its direction is governed by the manifold-seeking flow rather than by the prompt — so the
+            sample barely deviates from the source.
+          </p>
+          <p>
+            <b>We add a cleaner source of guidance.</b> Probing the <i>same</i> latent
+            <span class="sym">x</span><sub>t</sub><sup>src</sup> under the source vs. the target prompt yields a pure
+            semantic direction <span class="sym">v</span><sub>sem</sub>: it isolates what the prompt change alone wants
+            to do, with the spatial confound removed.
+          </p>
+          <p>
+            <b>We keep only its low-frequency part.</b> <span class="sym">v</span><sub>sem</sub> still carries
+            high-frequency stochastic noise, so a low-frequency wavelet operator
+            <span class="sym">F</span><sub>low</sub> retains only its coarse component
+            <span class="sym">v</span><sub>low</sub> — the global color, material, and layout — and discards the noisy
+            detail that would corrupt fine structure.
+          </p>
+          <p>
+            <b>We inject it where it matters, when it matters.</b> The final update combines the geometric term
+            <span class="sym">&Delta;v</span><sub>t</sub> with <span class="sym">v</span><sub>low</sub>, weighted by a
+            time factor that grows with the noise level <span class="sym">t</span> (overall strength
+            <span class="sym">&lambda;</span>): strong in the early steps where the edit is weakest, fading to zero
+            near the end so detail is left untouched — and reducing exactly to FlowEdit when
+            <span class="sym">&lambda;</span> = 0. The bottom row traces the resulting path, smoothly turning the
+            scene (flowers &rarr; dog) while the background layout stays in place.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== VISUAL RESULTS (carousel) ===================== -->
+<section class="section" style="padding-top:0">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <h2 class="title is-3">Results</h2>
+        <p class="content">Qualitative comparisons on PIE-Bench across local and global edits.</p>
+      </div>
+    </div>
+
+    <!-- 6 组，每行 2 组，共 3 行 -->
+    <div class="columns is-multiline is-centered">
+
+      <!-- ===== Group 1 ===== -->
+      <div class="column is-half">
+        <div class="edit-pair">
+          <div class="edit-imgs">
+            <figure class="image">
+              <img src="static/images/source/1.png" alt="source 1">
+            </figure>
+            <figure class="image">
+              <img src="static/images/target/1.png" alt="target 1">
+            </figure>
+          </div>
+          <p class="edit-caption">
+            <span class="src-prompt">source prompt</span>
+            <span class="arrow">&rarr;</span>
+            <span class="tgt-prompt">target prompt</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- ===== Group 2 ===== -->
+      <div class="column is-half">
+        <div class="edit-pair">
+          <div class="edit-imgs">
+            <figure class="image">
+              <img src="static/images/source/2.png" alt="source 2">
+            </figure>
+            <figure class="image">
+              <img src="static/images/target/2.png" alt="target 2">
+            </figure>
+          </div>
+          <p class="edit-caption">
+            <span class="src-prompt">source prompt</span>
+            <span class="arrow">&rarr;</span>
+            <span class="tgt-prompt">target prompt</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- ===== Group 3 ===== -->
+      <div class="column is-half">
+        <div class="edit-pair">
+          <div class="edit-imgs">
+            <figure class="image">
+              <img src="static/images/source/3.png" alt="source 3">
+            </figure>
+            <figure class="image">
+              <img src="static/images/target/3.png" alt="target 3">
+            </figure>
+          </div>
+          <p class="edit-caption">
+            <span class="src-prompt">source prompt</span>
+            <span class="arrow">&rarr;</span>
+            <span class="tgt-prompt">target prompt</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- ===== Group 4 ===== -->
+      <div class="column is-half">
+        <div class="edit-pair">
+          <div class="edit-imgs">
+            <figure class="image">
+              <img src="static/images/source/4.png" alt="source 4">
+            </figure>
+            <figure class="image">
+              <img src="static/images/target/4.png" alt="target 4">
+            </figure>
+          </div>
+          <p class="edit-caption">
+            <span class="src-prompt">source prompt</span>
+            <span class="arrow">&rarr;</span>
+            <span class="tgt-prompt">target prompt</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- ===== Group 5 ===== -->
+      <div class="column is-half">
+        <div class="edit-pair">
+          <div class="edit-imgs">
+            <figure class="image">
+              <img src="static/images/source/5.png" alt="source 5">
+            </figure>
+            <figure class="image">
+              <img src="static/images/target/5.png" alt="target 5">
+            </figure>
+          </div>
+          <p class="edit-caption">
+            <span class="src-prompt">source prompt</span>
+            <span class="arrow">&rarr;</span>
+            <span class="tgt-prompt">target prompt</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- ===== Group 6 ===== -->
+      <div class="column is-half">
+        <div class="edit-pair">
+          <div class="edit-imgs">
+            <figure class="image">
+              <img src="static/images/source/6.png" alt="source 6">
+            </figure>
+            <figure class="image">
+              <img src="static/images/target/6.png" alt="target 6">
+            </figure>
+          </div>
+          <p class="edit-caption">
+            <span class="src-prompt">source prompt</span>
+            <span class="arrow">&rarr;</span>
+            <span class="tgt-prompt">target prompt</span>
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ===================== BibTeX ===================== -->
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@inproceedings{tang2026wavelet,
+  title     = {Wavelet-Guided Semantic Signal Compensation for Inversion-Free Image Editing},
+  author    = {Tang, Anqi and Sun, Wenhao and Liu, Zhaoqiang},
+  booktitle = {European Conference on Computer Vision (ECCV)},
+  year      = {2026}
+}</code></pre>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content has-text-centered">
+          <p>
+            This page was built using the
+            <a href="https://github.com/eliahuhorwitz/Academic-project-page-template">Academic Project Page Template</a>,
+            adapted from the <a href="https://nerfies.github.io">Nerfies</a> project page.
+            You are free to borrow the source; please link back here in the footer.
+          </p>
+          <p>
+            This website is licensed under a
+            <a href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    if (window.bulmaCarousel) {
+      bulmaCarousel.attach('.carousel', {
+        slidesToShow: 1, slidesToScroll: 1, loop: true, infinite: true,
+        autoplay: true, autoplaySpeed: 4500, pauseOnHover: true
+      });
+    }
+  });
+</script>
+</body>
+</html>
+
