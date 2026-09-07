@@ -82,6 +82,10 @@
       color: #888;
       font-weight: bold;
     }
+    .edit-caption .src-prompt {
+      color: #2c3e50;
+      font-weight: 600;
+    }
     .edit-caption .tgt-prompt {
       color: #c0392b;
       font-weight: 600;
@@ -250,133 +254,132 @@
   </div>
 </section>
 
-<!-- ===================== VISUAL RESULTS (carousel) ===================== -->
+<!-- ===================== VISUAL RESULTS ===================== -->
 <section class="section" style="padding-top:0">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-full">
         <h2 class="title is-3">Results</h2>
-        <p class="content">Qualitative comparisons on PIE-Bench across local and global edits.</p>
+        <p class="content">Qualitative comparisons on PIE-Bench across local and global edits. Each strip shows, left to right: Input, FlowAlign, DVRF, FlowEdit, and <b>Ours</b>.</p>
       </div>
     </div>
 
-    <!-- 6 组，每行 2 组，共 3 行 -->
-    <div class="columns is-multiline is-centered">
+    <div class="columns is-centered">
+      <div class="column is-full">
 
-      <!-- ===== Group 1 ===== -->
-      <div class="column is-half">
+        <!-- ===== Result 1 ===== -->
         <div class="edit-pair">
-          <div class="edit-imgs">
+          <div class="edit-imgs" style="flex-direction:column">
             <figure class="image">
-              <img src="static/images/source/1.png" alt="source 1">
-            </figure>
-            <figure class="image">
-              <img src="static/images/target/1.png" alt="target 1">
+              <img src="static/images/results/result_1_woman_horse.jpg" alt="woman to man">
             </figure>
           </div>
           <p class="edit-caption">
-            <span class="src-prompt">source prompt</span>
+            <span class="src-prompt">a woman and a horse</span>
             <span class="arrow">&rarr;</span>
-            <span class="tgt-prompt">target prompt</span>
+            <span class="tgt-prompt">a man and a horse</span>
           </p>
         </div>
-      </div>
 
-      <!-- ===== Group 2 ===== -->
-      <div class="column is-half">
-        <div class="edit-pair">
-          <div class="edit-imgs">
+        <!-- ===== Result 2 ===== -->
+        <div class="edit-pair" style="margin-top:2rem">
+          <div class="edit-imgs" style="flex-direction:column">
             <figure class="image">
-              <img src="static/images/source/2.png" alt="source 2">
-            </figure>
-            <figure class="image">
-              <img src="static/images/target/2.png" alt="target 2">
+              <img src="static/images/results/result_2_cake_shape.jpg" alt="round cake to star cake">
             </figure>
           </div>
           <p class="edit-caption">
-            <span class="src-prompt">source prompt</span>
+            <span class="src-prompt">a round shape cake with orange frosting on a wooden plate</span>
             <span class="arrow">&rarr;</span>
-            <span class="tgt-prompt">target prompt</span>
+            <span class="tgt-prompt">a star shape cake with orange frosting on a wooden plate</span>
           </p>
         </div>
-      </div>
 
-      <!-- ===== Group 3 ===== -->
-      <div class="column is-half">
-        <div class="edit-pair">
-          <div class="edit-imgs">
+        <!-- ===== Result 3 ===== -->
+        <div class="edit-pair" style="margin-top:2rem">
+          <div class="edit-imgs" style="flex-direction:column">
             <figure class="image">
-              <img src="static/images/source/3.png" alt="source 3">
-            </figure>
-            <figure class="image">
-              <img src="static/images/target/3.png" alt="target 3">
+              <img src="static/images/results/result_3_panda_mouth.jpg" alt="panda close mouth to open mouth">
             </figure>
           </div>
           <p class="edit-caption">
-            <span class="src-prompt">source prompt</span>
+            <span class="src-prompt">a panda bear close his mouth</span>
             <span class="arrow">&rarr;</span>
-            <span class="tgt-prompt">target prompt</span>
+            <span class="tgt-prompt">a panda bear open his mouth</span>
           </p>
         </div>
-      </div>
 
-      <!-- ===== Group 4 ===== -->
-      <div class="column is-half">
-        <div class="edit-pair">
-          <div class="edit-imgs">
+        <!-- ===== Result 4 ===== -->
+        <div class="edit-pair" style="margin-top:2rem">
+          <div class="edit-imgs" style="flex-direction:column">
             <figure class="image">
-              <img src="static/images/source/4.png" alt="source 4">
-            </figure>
-            <figure class="image">
-              <img src="static/images/target/4.png" alt="target 4">
+              <img src="static/images/results/result_4_eggs_delete.jpg" alt="four eggs to three eggs">
             </figure>
           </div>
           <p class="edit-caption">
-            <span class="src-prompt">source prompt</span>
+            <span class="src-prompt">four eggs with drawings on them are in a nest</span>
             <span class="arrow">&rarr;</span>
-            <span class="tgt-prompt">target prompt</span>
+            <span class="tgt-prompt">three eggs with drawings on them are in a nest</span>
           </p>
         </div>
-      </div>
 
-      <!-- ===== Group 5 ===== -->
-      <div class="column is-half">
-        <div class="edit-pair">
-          <div class="edit-imgs">
+        <!-- ===== Result 5 ===== -->
+        <div class="edit-pair" style="margin-top:2rem">
+          <div class="edit-imgs" style="flex-direction:column">
             <figure class="image">
-              <img src="static/images/source/5.png" alt="source 5">
-            </figure>
-            <figure class="image">
-              <img src="static/images/target/5.png" alt="target 5">
+              <img src="static/images/results/result_5_hair_color.jpg" alt="brown hair to blue hair">
             </figure>
           </div>
           <p class="edit-caption">
-            <span class="src-prompt">source prompt</span>
+            <span class="src-prompt">woman with brown hair</span>
             <span class="arrow">&rarr;</span>
-            <span class="tgt-prompt">target prompt</span>
+            <span class="tgt-prompt">woman with blue hair</span>
           </p>
         </div>
-      </div>
 
-      <!-- ===== Group 6 ===== -->
-      <div class="column is-half">
-        <div class="edit-pair">
-          <div class="edit-imgs">
+        <!-- ===== Result 6 ===== -->
+        <div class="edit-pair" style="margin-top:2rem">
+          <div class="edit-imgs" style="flex-direction:column">
             <figure class="image">
-              <img src="static/images/source/6.png" alt="source 6">
-            </figure>
-            <figure class="image">
-              <img src="static/images/target/6.png" alt="target 6">
+              <img src="static/images/results/result_6_dog_delete.jpg" alt="man with dog to man without dog">
             </figure>
           </div>
           <p class="edit-caption">
-            <span class="src-prompt">source prompt</span>
+            <span class="src-prompt">an older man sitting on a bench with a dog</span>
             <span class="arrow">&rarr;</span>
-            <span class="tgt-prompt">target prompt</span>
+            <span class="tgt-prompt">an older man sitting on a bench</span>
           </p>
         </div>
-      </div>
 
+        <!-- ===== Result 7 ===== -->
+        <div class="edit-pair" style="margin-top:2rem">
+          <div class="edit-imgs" style="flex-direction:column">
+            <figure class="image">
+              <img src="static/images/results/result_7_chair_color.jpg" alt="black chair to blue chair">
+            </figure>
+          </div>
+          <p class="edit-caption">
+            <span class="src-prompt">black chair in a conference room</span>
+            <span class="arrow">&rarr;</span>
+            <span class="tgt-prompt">blue chair in a conference room</span>
+          </p>
+        </div>
+
+        <!-- ===== Result 8 ===== -->
+        <div class="edit-pair" style="margin-top:2rem">
+          <div class="edit-imgs" style="flex-direction:column">
+            <figure class="image">
+              <img src="static/images/results/result_8_cake_material.jpg" alt="chocolate cake to ice cream cake">
+            </figure>
+          </div>
+          <p class="edit-caption">
+            <span class="src-prompt">a chocolate cake with candies on top</span>
+            <span class="arrow">&rarr;</span>
+            <span class="tgt-prompt">a icecream cake with candies on top</span>
+          </p>
+        </div>
+
+      </div>
     </div>
   </div>
 </section>
