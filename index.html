@@ -159,8 +159,7 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <!-- REPLACE with: <img src="static/images/teaser.png" alt="Teaser"> -->
-      <div class="ph"><div><strong>Teaser &mdash; Fig. 1</strong><br><code>static/images/teaser.png</code><br><small>Global-edit failures of FlowEdit / FlowAlign / DVRF vs. ours.</small></div></div>
+      <img src="static/images/result_fig1.png" alt="Teaser" class="result-img" style="width:100%">
       <h2 class="subtitle has-text-centered" style="margin-top:14px">
         On global attribute shifts, prior inversion-free editors under-edit or drift;
         ours realizes the change while keeping the structure intact.
@@ -209,8 +208,7 @@
     </div>
 
     <!-- main method figure -->
-    <!-- REPLACE with: <img src="static/images/method.png" alt="Method overview"> -->
-    <div class="ph tall"><div><strong>Fig. 2 &mdash; Method overview</strong><br><code>static/images/method.png</code><br><small>(a) FlowEdit&rsquo;s single residual vs. (b) ours.</small></div></div>
+    <img src="static/images/method.png" alt="Method overview" class="result-img" style="width:100%">
 
     <div class="columns is-centered" style="margin-top:18px">
       <div class="column is-four-fifths">
@@ -260,7 +258,7 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-full">
         <h2 class="title is-3">Results</h2>
-        <p class="content">Qualitative comparisons on PIE-Bench across local and global edits. Each strip shows, left to right: Input, FlowAlign, DVRF, FlowEdit, and <b>Ours</b>.</p>
+        <p class="content">Qualitative results on PIE-Bench. Each pair shows the <b>Source</b> image (left) and <b>Ours</b> (right).</p>
       </div>
     </div>
 
@@ -269,6 +267,9 @@
 
         <!-- ===== Result 1 ===== -->
         <div class="edit-pair">
+          <p class="is-size-7 has-text-centered" style="margin-bottom:4px;letter-spacing:0.5em">
+            <b>Source</b> &nbsp;&nbsp;|&nbsp;&nbsp; <b>Ours</b>
+          </p>
           <div class="edit-imgs" style="flex-direction:column">
             <figure class="image">
               <img src="static/images/results/result_1_woman_horse.jpg" alt="woman to man">
@@ -283,6 +284,9 @@
 
         <!-- ===== Result 2 ===== -->
         <div class="edit-pair" style="margin-top:2rem">
+          <p class="is-size-7 has-text-centered" style="margin-bottom:4px;letter-spacing:0.5em">
+            <b>Source</b> &nbsp;&nbsp;|&nbsp;&nbsp; <b>Ours</b>
+          </p>
           <div class="edit-imgs" style="flex-direction:column">
             <figure class="image">
               <img src="static/images/results/result_2_cake_shape.jpg" alt="round cake to star cake">
@@ -297,6 +301,9 @@
 
         <!-- ===== Result 3 ===== -->
         <div class="edit-pair" style="margin-top:2rem">
+          <p class="is-size-7 has-text-centered" style="margin-bottom:4px;letter-spacing:0.5em">
+            <b>Source</b> &nbsp;&nbsp;|&nbsp;&nbsp; <b>Ours</b>
+          </p>
           <div class="edit-imgs" style="flex-direction:column">
             <figure class="image">
               <img src="static/images/results/result_3_panda_mouth.jpg" alt="panda close mouth to open mouth">
@@ -311,6 +318,9 @@
 
         <!-- ===== Result 4 ===== -->
         <div class="edit-pair" style="margin-top:2rem">
+          <p class="is-size-7 has-text-centered" style="margin-bottom:4px;letter-spacing:0.5em">
+            <b>Source</b> &nbsp;&nbsp;|&nbsp;&nbsp; <b>Ours</b>
+          </p>
           <div class="edit-imgs" style="flex-direction:column">
             <figure class="image">
               <img src="static/images/results/result_4_eggs_delete.jpg" alt="four eggs to three eggs">
@@ -325,6 +335,9 @@
 
         <!-- ===== Result 5 ===== -->
         <div class="edit-pair" style="margin-top:2rem">
+          <p class="is-size-7 has-text-centered" style="margin-bottom:4px;letter-spacing:0.5em">
+            <b>Source</b> &nbsp;&nbsp;|&nbsp;&nbsp; <b>Ours</b>
+          </p>
           <div class="edit-imgs" style="flex-direction:column">
             <figure class="image">
               <img src="static/images/results/result_5_hair_color.jpg" alt="brown hair to blue hair">
@@ -339,6 +352,9 @@
 
         <!-- ===== Result 6 ===== -->
         <div class="edit-pair" style="margin-top:2rem">
+          <p class="is-size-7 has-text-centered" style="margin-bottom:4px;letter-spacing:0.5em">
+            <b>Source</b> &nbsp;&nbsp;|&nbsp;&nbsp; <b>Ours</b>
+          </p>
           <div class="edit-imgs" style="flex-direction:column">
             <figure class="image">
               <img src="static/images/results/result_6_dog_delete.jpg" alt="man with dog to man without dog">
@@ -353,6 +369,9 @@
 
         <!-- ===== Result 7 ===== -->
         <div class="edit-pair" style="margin-top:2rem">
+          <p class="is-size-7 has-text-centered" style="margin-bottom:4px;letter-spacing:0.5em">
+            <b>Source</b> &nbsp;&nbsp;|&nbsp;&nbsp; <b>Ours</b>
+          </p>
           <div class="edit-imgs" style="flex-direction:column">
             <figure class="image">
               <img src="static/images/results/result_7_chair_color.jpg" alt="black chair to blue chair">
@@ -367,6 +386,9 @@
 
         <!-- ===== Result 8 ===== -->
         <div class="edit-pair" style="margin-top:2rem">
+          <p class="is-size-7 has-text-centered" style="margin-bottom:4px;letter-spacing:0.5em">
+            <b>Source</b> &nbsp;&nbsp;|&nbsp;&nbsp; <b>Ours</b>
+          </p>
           <div class="edit-imgs" style="flex-direction:column">
             <figure class="image">
               <img src="static/images/results/result_8_cake_material.jpg" alt="chocolate cake to ice cream cake">
